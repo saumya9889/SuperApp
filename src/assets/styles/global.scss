@@ -1,0 +1,16 @@
+// @use "./signup";
+@use '../styles/signup' as *; 
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+
+.container{
+    margin: 0 auto;
+    // width: 1350px;
+}
