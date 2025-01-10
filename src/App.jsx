@@ -1,7 +1,8 @@
 import React from 'react';
+import '@fontsource/gloria-hallelujah'; 
 import SignUp from './Page/SignUp/index.jsx';
 import './assets/styles/global.scss';
-// import './App.css'
+
 
 
 function App (){

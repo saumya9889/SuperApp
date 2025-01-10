@@ -17,17 +17,19 @@ const signUp =()=>{
             </div>
             <div className="signup-form">
             <form>
-            <label>Name:</label>
             <input type="text" name="name" placeholder="Enter your name"/>
-            <label>Username:</label>
             <input type="text" placeholder='Username' />
-            <label>Email:</label>
             <input type="email" placeholder='Email' />
-            <label>Mobile:</label>
             <input type="Mobile" placeholder='Mobile' />
-            <div className="checkbox" type="checkbox">Share my registration data with Superapp</div>
-            <button>Sign Up</button>
+            <div className="terms">
+            <input className="checkbox" type="checkbox" />
+            <h6> Share my registration data with Superapp</h6> 
+            </div>
+            <button type="submit">Sign Up</button>
             </form>
+             <p className='policies'>By clicking on Sign up. you agree to Superapp <a href='terms'>Terms and<br/>Conditions of Use</a>
+             <br/><br/> To learn more about how Superapp collects, uses, shares and<br/> protects your personal data please head Superapp <a href='privacy'>Privacy Policy</a>
+             </p>
             </div>
           </div>
           </div>
