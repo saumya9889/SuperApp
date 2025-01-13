@@ -56,6 +56,7 @@ const HomePage = () => {
               )
             )}
           </div>
+          <button className="btn">Next Page</button>
         </div>
       </div>
     </>
