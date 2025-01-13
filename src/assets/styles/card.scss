@@ -1,0 +1,33 @@
+.card {
+
+    .card-body {
+        width: 213px;
+        height: 200px;
+        background-color: #000;
+        border-radius: 10px;
+        margin: 10px;
+        position: relative;
+
+        .card-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: none;
+            font-family: "system-ui", sans-serif;
+
+        }
+
+        .card-img {
+            width: 80%;
+            height: 51%;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 1rem;
+            left: 1.3rem;
+        }
+    }
+}

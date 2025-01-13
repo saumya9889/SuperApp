@@ -1,7 +1,69 @@
-.home-page{
+.home-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 1rem;
-    
+    margin-top: 3rem;
+
+    .home-page-left {
+        margin: 0 auto;
+
+        h1 {
+            font-size: 55px;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            background: none;
+            font-family: monospace;
+            line-height: 84px;
+            margin-top: 2rem;
+
+        }
+
+        .selected-category {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            width: 70%;
+            gap: 10px;
+            margin-top: 3rem;
+            margin-left: 1rem;
+            
+
+            .sub-category {
+                background: rgba(20, 138, 8, 1);
+                border-radius: 30px;
+                padding: 10px;
+                cursor: pointer;
+                width: 154px;
+                height: 40px;
+                padding-left: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                span{
+                    color: #ffffff;
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: "DM Sans", sans-serif;
+                    text-transform: capitalize;
+                    background: none;
+                }
+                .fa-xmark{
+                    color: black;
+                    background: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+            }
+        }
+
+    }
+
+    .home-page-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+    }
 
 }

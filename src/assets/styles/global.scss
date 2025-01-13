@@ -1,6 +1,7 @@
 
 @use '../styles/signup' as *; 
 @use '../styles/home' as *;
+@use '../styles/card.scss' as *;
 
 
 
@@ -10,7 +11,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // background-color: #000000;
+    background-color: #000000;
 }
 
 .container{
