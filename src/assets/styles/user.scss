@@ -1,0 +1,30 @@
+.user-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    margin-top: 2rem;
+
+    .user-page-left{
+
+        .profile{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background: rgba(87, 70, 234, 1);
+
+            .profile-img{
+       img{
+        width: 210px;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 100px;
+       }
+            }
+        }
+    }
+}
