@@ -1,29 +1,106 @@
-.user-page{
+.user-page {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     justify-content: center;
     align-items: center;
     gap: 10px;
     color: #000;
     margin-top: 2rem;
 
-    .user-page-left{
+    .user-page-left {
+        width: 892px;
 
-        .profile{
-            display: flex;
-            flex-direction: column;
+        .profile {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            padding: 1rem;
             justify-content: center;
             align-items: center;
             gap: 10px;
-            background: rgba(87, 70, 234, 1);
+            background: rgb(87, 70, 234);
+            border-radius: 49px;
+            width: 90%;
 
-            .profile-img{
-       img{
-        width: 210px;
-        height: 450px;
-        object-fit: cover;
-        border-radius: 100px;
-       }
+            .profile-img {
+                img {
+                    width: 210px;
+                    height: 450px;
+                    object-fit: cover;
+                    border-radius: 100px;
+                    border: 5px solid #ffffff;
+                }
+            }
+
+            .profile-data {
+                margin: 0 auto;
+
+                h2 {
+                    color: #ffffff;
+                    font-size: 36px;
+                    margin-top: 1rem;
+                }
+
+                p {
+                    color: #ffffff;
+                    font-size: 36px;
+                    margin-top: 1rem;
+                }
+
+                h1 {
+                    color: #ffffff;
+                    font-size: 60px;
+                    font-weight: 700;
+                    line-height: 37px;
+                    font-family: "Roboto", sans-serif;
+                    margin-top: 2rem;
+
+                }
+
+                .interests-wrapper {
+                    display: grid;
+                    gap: 12px;
+                    align-items: center;
+                    justify-content: center;
+                    grid-template-columns: repeat(2, 1fr);
+                    margin-top: 2rem;
+
+                    .interest {
+                        color: #ffffff;
+                        font-size: 22px;
+                        background: rgb(159, 148, 255);
+                        border-radius: 50px;
+                        width: 156px;
+                        text-align: center;
+                        height: 34px;
+                        padding-top: 3px;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+
+        .weather{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 2rem;
+            background-color: blue;
+        }
+    }
+
+    .user-page-right {
+        margin-top: 1rem;
+
+        .right-card-content {
+            img {
+                width: 367px;
+                height: 555px;
+                object-fit: cover;
+                border-top-left-radius: 19px;
+                border-top-right-radius: 19px;
             }
         }
     }
