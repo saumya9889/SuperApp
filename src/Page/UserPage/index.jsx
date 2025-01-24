@@ -1,6 +1,7 @@
 import React from "react";
 import Profile from "../../assets/images/profile.png";
 import Mountain from "../../assets/images/mountain.png";
+import WeatherCard from "../../Component/WeatherCard";
 
 export const UserPage = () => {
   return (
@@ -24,33 +25,14 @@ export const UserPage = () => {
                 </div>
               </div>
             </div>
+
+            {/* weather */}
             <div className="weather">
-              <div className="weather-time">
-                <p className="date">date</p>
-                <p className="time">Time</p>
-              </div>
-
-              <div className="weather-data">
-                <div className="weather-forecast">
-                  <icon>nkjn</icon>
-                  <p>temp</p>
-                </div>
-                <div className="weather-temp">
-                  <span className="temp">55degrees</span>
-                  <div className="temp-pressure">
-                    <icon>icon</icon>
-                    <span className="pressure">pressure</span>
-                  </div>
-                </div>
-
-                <div className="weather-humidity">
-                  <icon>icon</icon>
-                  <span className="humidity">humidity</span>
-                  <span className="wind">wind</span>
-                </div>
-              </div>
+            <WeatherCard />
+              
             </div>
           </div>
+          {/* weather end */}
           <div className="user-page-right">
           <div className="right-card-content">
             <img src={Mountain} alt="mountain" />

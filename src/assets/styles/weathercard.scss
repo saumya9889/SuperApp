@@ -1,0 +1,88 @@
+.weather-card {
+    background: #1a1a2e;
+    border-radius: 30px;
+    overflow: hidden;
+    color: #fff;
+    font-family: "monospace", sans-serif;
+    width: 750px;
+    margin-top: 2rem;
+
+    &__header {
+        display: flex;
+        background: #ff00ff;
+        padding: 12px;
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0 auto;
+        gap: 10px;
+        justify-content: space-around;
+        height: 56px;
+    }
+
+
+    &__body {
+        padding: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        gap: 10px;
+        background: #0f3460;
+
+        .line-space {
+            border-left: 3px solid #ffffff;
+            height: 56px;
+            margin: 0 10px;
+        }
+
+        .weather-condition {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            .weather-icon {
+                font-size: 24px;
+            }
+        }
+
+        .temperature {
+            font-size: 20px;
+            font-weight: bold;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            text-align: center;
+            .temp-wrap{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+            gap: 20px;
+
+            .detail-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .detail-item-wrap{
+                  display: flex;
+                  flex-direction: column;
+                .value {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                .label {
+                    font-size: 12px;
+                    color: #aaa;
+                }
+            }
+            }
+        }
+    }
+}

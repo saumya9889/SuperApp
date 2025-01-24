@@ -8,6 +8,7 @@ import './assets/styles/global.scss';
 
 
 
+
 function App (){
 
   return (
@@ -19,6 +20,7 @@ function App (){
         <Route path="/user" element={<UserPage />} />
       </Routes>
     </Router>
+   
     </>
   )
 }

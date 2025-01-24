@@ -57,7 +57,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container">
+    // <div className="container">
       <div className="signup-page">
         <div className="signup-left">
           <img src={SignUpImg} className="signup-img" alt="signup" />
@@ -156,7 +156,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 
