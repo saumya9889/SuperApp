@@ -23,7 +23,7 @@
     &__body {
         padding: 15px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 20px 1fr 20px 1fr;
         align-items: center;
         gap: 10px;
         background: #0f3460;
@@ -51,6 +51,7 @@
             display: grid;
             grid-template-rows: 1fr 1fr;
             text-align: center;
+            align-items: center;
             .temp-wrap{
                 display: flex;
                 flex-direction: row;
