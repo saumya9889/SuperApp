@@ -1,0 +1,63 @@
+$card-border-radius: 12px;
+$overlay-bg-color: rgba(0, 0, 0, 0.6);
+$text-color: #fff;
+
+
+.card {
+  max-width: 400px;
+  border-radius: $card-border-radius;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .card-image {
+    img {
+        width: 367px;
+           height: 456px;
+           object-fit: cover;
+           border-top-left-radius: 19px;
+           border-top-right-radius: 19px;
+    }
+  }
+
+  .card-content {
+    position: relative;
+
+    .card-overlay {
+      position: absolute;
+      top: -6rem;
+      left: 0;
+      width: 100%;
+      padding: 16px;
+      background-color: $overlay-bg-color;
+      color: $text-color;
+
+      h2 {
+        font-size: 1.5rem;
+        margin: 0 0 8px;
+        margin-top: 1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    font-family: "comic sans ms";
+      }
+    }
+
+    .card-text {
+        padding: 16px;
+        margin-top: -2rem;
+        background: #fff;
+        color: #333;
+        width: 367px;
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin: 0;
+        font-family: "comic sans ms";
+      }
+    }
+  }
+}

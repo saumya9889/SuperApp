@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import SignUpImg from "../../assets/images/signup-img.png";
 import { Logo } from "../Logo";
+import { UserContext } from "../../Component/UserContext";
 
 const SignUp = () => {
-  const navigate = useNavigate(); 
+  const { setUser } = useContext(UserContext);
+
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,6 +15,14 @@ const SignUp = () => {
     phone: "",
     agreeToTerms: false,
   });
+
+
+  // setUser({
+  //   name: formData.name,
+  //   email: formData.email,
+  //   username: formData.username,
+  // })
+
 
   const [errors, setErrors] = useState({}); // State to store field errors
 
@@ -42,6 +53,18 @@ const SignUp = () => {
     return newErrors;
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const validationErrors = validateForm();
+  //   if (Object.keys(validationErrors).length > 0) {
+  //     setErrors(validationErrors); // Set errors if any field is invalid
+  //   } else {
+  //     setErrors({});
+  //     alert("Form submitted successfully!");
+  //     console.log("Form Data:", formData);
+  //     navigate("/home");
+  //   }
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
@@ -49,115 +72,128 @@ const SignUp = () => {
       setErrors(validationErrors); // Set errors if any field is invalid
     } else {
       setErrors({});
+      // Save to context
+      setUser({
+        name: formData.name,
+        email: formData.email,
+        username: formData.username,
+        choices: ["Hiking", "Photography", "Travel"], // Example interests
+      });
       alert("Form submitted successfully!");
-      console.log("Form Data:", formData);
-      navigate("/home");
-
+      navigate("/home"); // Navigate to UserPage
     }
   };
 
+
   return (
     // <div className="container">
-      <div className="signup-page">
-        <div className="signup-left">
-          <img src={SignUpImg} className="signup-img" alt="signup" />
-          <h1>Discover new things on Superapp</h1>
+    <div className="signup-page">
+      <div className="signup-left">
+        <img src={SignUpImg} className="signup-img" alt="signup" />
+        <h1>Discover new things on Superapp</h1>
+      </div>
+      <div className="signup-right">
+        <div className="signup-logo">
+          <Logo />
+          <p>Create your new account</p>
         </div>
-        <div className="signup-right">
-          <div className="signup-logo">
-           <Logo/>
-            <p>Create your new account</p>
-          </div>
-          <div className="signup-form">
-            <form onSubmit={handleSubmit}>
-              <div className="form-group">
+        <div className="signup-form">
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter your name"
+                style={{ borderColor: errors.name ? "red" : "#ccc" }}
+              />
+              {errors.name && (
+                <span className="error-message">{errors.name}</span>
+              )}
+            </div>
+
+            <div className="form-group">
+              <input
+                type="username"
+                name="username"
+                value={formData.username}
+                onChange={handleChange}
+                placeholder="Enter your username"
+                style={{ borderColor: errors.username ? "red" : "#ccc" }}
+              />
+              {errors.username && (
+                <span className="error-message">{errors.username}</span>
+              )}
+            </div>
+
+            <div className="form-group">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                style={{ borderColor: errors.email ? "red" : "#ccc" }}
+              />
+              {errors.email && (
+                <span className="error-message">{errors.email}</span>
+              )}
+            </div>
+
+            <div className="form-group">
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Enter your phone number"
+                style={{ borderColor: errors.phone ? "red" : "#ccc" }}
+              />
+              {errors.phone && (
+                <span className="error-message">{errors.phone}</span>
+              )}
+            </div>
+
+            <div className="terms">
+              <label className="terms-wrap">
                 <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
+                  type="checkbox"
+                  className="checkbox"
                   onChange={handleChange}
-                  placeholder="Enter your name"
-                  style={{ borderColor: errors.name ? "red" : "#ccc" }}
+                  name="agreeToTerms"
+                  value={formData.agreeToTerms}
                 />
-                {errors.name && (
-                  <span className="error-message">{errors.name}</span>
-                )}
-              </div>
+                Share my registration data with Superapp
+              </label>
+              {errors.agreeToTerms && (
+                <span className="error-messages">{errors.agreeToTerms}</span>
+              )}
+            </div>
 
-              <div className="form-group">
-                <input
-                  type="username"
-                  name="username"
-                  value={formData.username}
-                  onChange={handleChange}
-                  placeholder="Enter your username"
-                  style={{ borderColor: errors.username ? "red" : "#ccc" }}
-                />
-                {errors.username && (
-                  <span className="error-message">{errors.username}</span>
-                )}
-              </div>
+            <button type="submit">Sign Up</button>
+          </form>
 
-              <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Enter your email"
-                  style={{ borderColor: errors.email ? "red" : "#ccc" }}
-                />
-                {errors.email && (
-                  <span className="error-message">{errors.email}</span>
-                )}
-              </div>
-
-              <div className="form-group">
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Enter your phone number"
-                  style={{ borderColor: errors.phone ? "red" : "#ccc" }}
-                />
-                {errors.phone && (
-                  <span className="error-message">{errors.phone}</span>
-                )}
-              </div>
-
-              <div className="terms">
-                <label className="terms-wrap">
-                  <input
-                    type="checkbox"
-                    className="checkbox"
-                    onChange={handleChange}
-                    name="agreeToTerms"
-                    value={formData.agreeToTerms}
-                  />
-                  Share my registration data with Superapp
-                </label>
-                {errors.agreeToTerms && (
-                  <span className="error-messages">{errors.agreeToTerms}</span>
-                )}
-              </div>
-
-              <button type="submit">Sign Up</button>
-            </form>
-
-            <p className="policies">
-              By clicking on Sign up, you agree to Superapp{" "}
-              <a href="/terms">Terms and Conditions of Use</a>.
-              <br />
-              To learn more about how Superapp collects, uses, shares, and
-              protects your personal data, please head to Superapp{" "}
-              <a href="/privacy">Privacy Policy</a>.
-            </p>
-          </div>
+          <p className="policies">
+            By clicking on Sign up, you agree to Superapp{" "}
+            <a href="/terms">Terms and Conditions of Use</a>.
+            <br />
+            To learn more about how Superapp collects, uses, shares, and
+            protects your personal data, please head to Superapp{" "}
+            <a href="/privacy">Privacy Policy</a>.
+          </p>
         </div>
       </div>
+    </div>
     // </div>
   );
 };
 
 export default SignUp;
+
+
+
+
+
+
+

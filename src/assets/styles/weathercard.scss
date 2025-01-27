@@ -30,7 +30,7 @@
 
         .line-space {
             border-left: 3px solid #ffffff;
-            height: 56px;
+            height: 70px;
             margin: 0 10px;
         }
 
@@ -38,10 +38,15 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
 
             .weather-icon {
                 font-size: 24px;
+            }
+            .weather-description {
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: capitalize;
             }
         }
 
@@ -52,9 +57,20 @@
             grid-template-rows: 1fr 1fr;
             text-align: center;
             align-items: center;
+            gap: 15px;
+            .temp-value{
+                font-size: 40px;
+            }
+            
             .temp-wrap{
                 display: flex;
                 flex-direction: row;
+                gap: 15px;
+                align-items: inherit;
+            }
+            .value{
+                text-align: start;
+                font-size: 20px;
             }
         }
 
@@ -63,8 +79,8 @@
             justify-content: space-around;
             flex-direction: column;
             width: 100%;
-            margin-top: 10px;
-            gap: 20px;
+            // margin-top: 10px;
+            gap: 15px;
 
             .detail-item {
                 display: flex;
@@ -73,14 +89,14 @@
                 .detail-item-wrap{
                   display: flex;
                   flex-direction: column;
-                .value {
+                .details-item-value {
                     font-size: 14px;
                     font-weight: bold;
                 }
 
                 .label {
-                    font-size: 12px;
-                    color: #aaa;
+                    font-size: 16px;
+                    color: #ffff;
                 }
             }
             }
