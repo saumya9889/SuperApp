@@ -9,11 +9,14 @@ export const UserProvider = ({ children }) => {
     name: "",
     email: "",
     username: "",
+  });
+
+  const [userSelect, setUserSelect] = useState({
     choices: [],
   });
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider value={{ user, setUser, userSelect, setUserSelect }}>
       {children}
     </UserContext.Provider>
   );

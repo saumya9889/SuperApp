@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Logo } from "../Logo";
 import { Card } from "../../Component/Card";
 import { cardData } from "../../Component/Data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../Component/UserContext";
 
 const HomePage = () => {
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate();
+  const { user, setUser, setUserSelect } = useContext(UserContext); // Access context functions
 
   // Function to handle card selection
   const handleCardClick = (title) => {
@@ -19,15 +21,20 @@ const HomePage = () => {
 
   // Function to remove a selected category
   const handleRemoveCategory = (title) => {
-    if (selectedCategories.length > 3) {
-      setSelectedCategories(selectedCategories.filter((category) => category !== title));
-    } else {
-      alert("You must select at least 3 categories!");
-    }
+    setSelectedCategories(selectedCategories.filter((category) => category !== title));
   };
 
   // Function to navigate to the next page
   const handleNextPage = () => {
+    const updatedUser = {
+      ...user, // Preserve existing user details
+      choices: selectedCategories, // Add selected categories
+    };
+
+    // Save updated data to context and local storage
+    setUserSelect({ choices: selectedCategories }); // Update choices in context
+    localStorage.setItem("userData", JSON.stringify(updatedUser)); // Save full user data in local storage
+
     navigate("/user"); // Navigate to the /user route
   };
 
@@ -50,11 +57,7 @@ const HomePage = () => {
                     <span>{category}</span>
                     <FontAwesomeIcon
                       icon={faXmark}
-                      beat
-                      style={{
-                        cursor: selectedCategories.length > 3 ? "pointer" : "not-allowed",
-                        color: selectedCategories.length > 3 ? "#63E6BE" : "gray",
-                      }}
+                      style={{ cursor: "pointer", color: "#63E6BE" }}
                       onClick={() => handleRemoveCategory(category)}
                     />
                   </div>

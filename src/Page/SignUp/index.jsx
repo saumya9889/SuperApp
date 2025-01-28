@@ -77,7 +77,6 @@ const SignUp = () => {
         name: formData.name,
         email: formData.email,
         username: formData.username,
-        choices: ["Hiking", "Photography", "Travel"], // Example interests
       });
       alert("Form submitted successfully!");
       navigate("/home"); // Navigate to UserPage
