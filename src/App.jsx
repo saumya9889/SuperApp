@@ -15,18 +15,27 @@ function App (){
 
   return (
     <>
-    <UserProvider>
+    {/* <UserProvider>
    <Router>
       <Routes>
         <Route path="/" element={<SignUp />} /> 
         <Route path="/home" element={<HomePage />} />
         <Route path="/user" element={<UserPage />} />
         <Route path="/usernote" element={<UserNote />} />
-
       </Routes>
       
     </Router>
-    </UserProvider>
+    </UserProvider> */}
+    <UserProvider>
+  <Router>
+    <Routes>
+      <Route path="/" element={<SignUp />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/user" element={<UserPage />} />
+      <Route path="/usernote" element={<UserNote />} />
+    </Routes>
+  </Router>
+</UserProvider>
    
     </>
   )

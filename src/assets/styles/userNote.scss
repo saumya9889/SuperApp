@@ -1,0 +1,21 @@
+.user-note{
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    margin-top: 1rem;
+
+    .usernote-content-left{
+        .usernote-content-left-top{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+        }
+    }
+
+    .usernote-content-right{
+        width: 392px;
+        height: 700px!important;
+    }
+}

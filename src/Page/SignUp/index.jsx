@@ -27,7 +27,7 @@ const SignUp = () => {
   const [errors, setErrors] = useState({}); // State to store field errors
 
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e?.target;
 
     if (name === "phone") {
       // Allow only numeric values for the phone field
