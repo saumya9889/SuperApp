@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { UserContext } from "../Component/UserContext";
 import Profile from "../assets/images/profile.png";
 
-export const ProfileCard = () => {
+export const ProfileCard = ({className}) => {
   const { user, setUser, userSelect, setUserSelect } = useContext(UserContext);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export const ProfileCard = () => {
   }
   return (
     <>
-      <div className="profile-card">
+      <div  className={`profile-card ${className}`}>
         <div className="profile">
           <div className="profile-img">
             <img src={Profile} alt="profile" />

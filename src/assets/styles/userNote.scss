@@ -1,21 +1,113 @@
-.user-note{
+.user-note {
     display: grid;
     grid-template-columns: 1fr 400px;
     margin-top: 1rem;
 
-    .usernote-content-left{
-        .usernote-content-left-top{
+    .usernote-content-left {
+        .usernote-content-left-top {
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-content: center;
             align-items: center;
             gap: 10px;
-            
+
         }
     }
 
-    .usernote-content-right{
+    .usernote-content-right {
         width: 392px;
-        height: 700px!important;
+        height: 700px !important;
+    }
+}
+
+
+.custom-profile {
+    .profile {
+        width: 100%; //507px
+        height: 220px; //350
+        padding: .5rem 2rem;
+        display: flex;
+        gap: 30px;
+        flex-direction: row;
+        background: linear-gradient(135deg, rgb(61 10 190) 47%, rgb(198 90 238) 100%);
+
+        .profile-img img {
+            width: 90px;
+            height: 193px;
+
+        }
+
+        .profile-data {
+            h2 {
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 600;
+                margin-top: .6rem;
+
+
+            }
+
+            h1 {
+                font-size: 28px;
+    margin-top: 0.5rem;
+    letter-spacing: -.01em;
+    font-weight: 600;
+            }
+
+            .interests-wrapper {
+                margin-top: .6rem;
+
+                .interest {
+                    width: 130px;
+                    text-align: center;
+                    height: 32px;
+                    padding-top: 5px;
+                    font-size: 17px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+.custom-weather {
+    width: 507px;
+    margin-top: 1.5rem;
+    height: max-content; //212px
+    .weather-card__header {
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .weather-card__body {
+        padding: 0;
+        gap: 0;
+        .weather-condition{
+            gap: 0;
+            .weather-icon{
+              font-size: 0px;
+            }
+        }
+        .temperature{
+            gap: 0;
+            .temp-value{
+                font-size: 30px;
+            }
+            .temp-wrap{
+                gap: 0;
+            }
+            .value{
+                font-size: 14px;
+            }
+        }
+        .details{
+            gap: 0;
+            .detail-item .detail-item-wrap .label{
+                font-size: 14px;
+            }
+        }
     }
 }

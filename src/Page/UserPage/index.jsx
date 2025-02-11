@@ -11,7 +11,7 @@ export const UserPage = () => {
     <div className="container">
       <div className="user-page">
         <div className="user-page-left">
-           <ProfileCard />
+           <ProfileCard  />
            
           {/* Weather */}
           <div className="weather">

@@ -12,10 +12,6 @@ export const UserNote = () => {
 
     console.log("UserNote - User Data:", user);
     console.log("UserNote - User Select Data:", userSelect);
-
-
-
-  
   return (
     <>
      <div className='container'>
@@ -24,13 +20,16 @@ export const UserNote = () => {
               <div className='usernote-content-left-top'>
                 <div className='usernote-content-left-top-left'>
                 <div className='profile-usernote'>
-                  <ProfileCard/>
+                  <ProfileCard className="custom-profile" />
                   {/* <ProfileCard user={user} userSelect={userSelect} /> */}
 
                 </div>
                 <div className='weather-usernote'>
-                  <WeatherCard />
+                  <WeatherCard  className="custom-weather"/>
                 </div>
+                </div>
+                <div className='usernote-content-left-top-right'>
+                  <h2>All Notes</h2>
                 </div>
                 
               </div>

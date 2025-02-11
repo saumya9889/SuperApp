@@ -11,7 +11,7 @@ import {
   WiThermometer,
 } from "react-icons/wi"; // Import icons
 
-const WeatherCard = () => {
+const WeatherCard = ({className}) => {
   const [weatherData, setWeatherData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -71,7 +71,7 @@ const WeatherCard = () => {
   }
 
   return (
-    <div className="weather-card">
+    <div className={`weather-card ${className}`}>
       <div className="weather-card__header">
         <span className="date">{date}</span>
         <span className="time">{time}</span>
