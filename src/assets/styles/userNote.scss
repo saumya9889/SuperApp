@@ -9,10 +9,61 @@
             grid-template-columns: 1fr 1fr;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 35px;
+
+        }
+
+        .usernote-content-left-top-right {
+            background: rgba(241, 199, 91, 1);
+            width: 385px;
+            height: 422px;
+            // margin-top: 1rem;
+            border-radius: 10px;
+
+            .usernote-wrap-head {
+                padding: 1rem 1rem 0rem 1rem;
+
+                .usernote-head {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+            }
+
+            .usernote-wrap-textarea {
+                .usernote-textarea {
+                    background: rgba(241, 199, 91, 1);
+                    width: 372px;
+                    height: 346px;
+                    // margin-top: 1rem;
+                    padding: 1rem 1rem 1rem 1rem;
+                    border: none;
+                    outline: none;
+                    resize: none;
+                    overflow-y: scroll;
+                    border-radius: 10px;
+
+                }
+            }
+
+
+        }
+
+        .usernote-content-left-bottom{
+            background: rgba(30, 35, 67, 1);
+            width: 925px;
+            height: 35%;
+            margin-top: 1rem;
+            border-radius: 10px;
+        
+            .music-player{
+                
+            }
+            .music-wrapper-table{
 
         }
     }
+    }
+
 
     .usernote-content-right {
         width: 392px;
@@ -20,6 +71,22 @@
     }
 }
 
+
+.usernote-textarea::-webkit-scrollbar {
+    width: 4px;
+    height: 6px;
+}
+.usernote-textarea::-webkit-scrollbar-track {
+    background-color: rgba(241, 199, 91, 1);
+}
+.usernote-textarea::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 10px;         
+}
+
+.usernote-textarea::-webkit-scrollbar-thumb:hover {
+background: #999;
+}
 
 .custom-profile {
     .profile {
@@ -52,9 +119,9 @@
 
             h1 {
                 font-size: 28px;
-    margin-top: 0.5rem;
-    letter-spacing: -.01em;
-    font-weight: 600;
+                margin-top: 0.5rem;
+                letter-spacing: -.01em;
+                font-weight: 600;
             }
 
             .interests-wrapper {
@@ -77,6 +144,7 @@
     width: 507px;
     margin-top: 1.5rem;
     height: max-content; //212px
+
     .weather-card__header {
         height: 42px;
         font-size: 22px;
@@ -85,29 +153,43 @@
     .weather-card__body {
         padding: 0;
         gap: 0;
-        .weather-condition{
+
+        .weather-condition {
             gap: 0;
-            .weather-icon{
-              font-size: 0px;
+
+            .weather-icon {
+                font-size: 0px;
             }
         }
-        .temperature{
+
+        .temperature {
             gap: 0;
-            .temp-value{
+
+            .temp-value {
                 font-size: 30px;
             }
-            .temp-wrap{
+
+            .temp-wrap {
                 gap: 0;
             }
-            .value{
+
+            .value {
                 font-size: 14px;
             }
         }
-        .details{
+
+        .details {
             gap: 0;
-            .detail-item .detail-item-wrap .label{
+
+            .detail-item .detail-item-wrap .label {
                 font-size: 14px;
             }
         }
     }
+}
+
+.custom-newsfeed{
+    margin-top: 0;
+    border-radius: 10px;
+    max-height: 638px;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export const NewsFeed = () => {
+export const NewsFeed = ({ className}) => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -34,7 +34,7 @@ export const NewsFeed = () => {
   }
 
   return (
-    <div className="news-feed">
+    <div className={`news-feed ${className}`}>
       {news.map((article, index) => (
         <NewsCard
           key={index}
