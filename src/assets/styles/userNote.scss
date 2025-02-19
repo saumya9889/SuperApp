@@ -48,26 +48,152 @@
 
         }
 
-        .usernote-content-left-bottom{
+        .usernote-content-left-bottom {
             background: rgba(30, 35, 67, 1);
             width: 925px;
-            height: 35%;
+            height: 33%;
             margin-top: 1rem;
             border-radius: 10px;
-        
-            .music-player{
-                
-            }
-            .music-wrapper-table{
+            display: grid;
+            grid-template-columns: 1fr 520px;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 3rem;
+            border-radius: 10px;
 
+            .music-player-wrapper {
+                position: relative;
+                background: #181d37;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 3px 3px 6px #19131e inset, -3px -3px 6px 1px #17161680 inset;
+
+                .music-player {
+                    border: 8px solid rgba(255, 106, 106, 1);
+                    width: 168px;
+                    height: 168px;
+                    border-radius: 50%;
+                }
+
+                .timer {
+                    position: absolute;
+
+                    p {
+                        font-weight: 600;
+                        color: #ffff;
+                        font-size: 28px;
+                        letter-spacing: -.0075em;
+                        line-height: 36px;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+
+            }
+
+
+
+            .time-inputs {
+                display: flex;
+                gap: 80px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-top: -3rem;
+                position: relative;
+
+
+                .time-unit {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: rgba(148, 148, 148, 1);
+                    font-size: 24px;
+                    gap: 3px;
+
+                    span {
+                        font-size: 18px;
+                        font-family: 'Courier New', Courier, monospace;
+                        font-weight: 600;
+                        // padding-bottom: 1rem;
+                    }
+
+                    button {
+                        background: none;
+                        border: none;
+                        color: rgba(148, 148, 148, 1);
+                        font-size: 24px;
+                        cursor: pointer;
+                    }
+
+                    .time-value {
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin: 14px 0;
+                        color: rgba(255, 255, 255, 1);
+                    }
+
+                    .colon {
+                        font-size: 34px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        margin-left: 10rem;
+                        margin-top: 1rem;
+                        color: #ffff;
+                    }
+                }
+
+            }
+
+            .start-btn {
+                background-color: #ff6a6a;
+                color: white;
+                border: none;
+                padding: 12px 40px;
+                border-radius: 25px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.3s;
+                position: absolute;
+                bottom: -3.3rem;
+                width: 70%;
+
+                &:hover {
+                    background-color: #ff4d4d;
+                }
+            }
         }
-    }
     }
 
 
     .usernote-content-right {
         width: 392px;
         height: 700px !important;
+    }
+
+    .browse-btn {
+        background-color: rgba(20, 138, 8, 1);
+        color: white;
+        border: none;
+        padding: 14px 40px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        position: absolute;
+        width: 10%;
+        right: 90px;
+        bottom: 1rem;
+        &:hover {
+            background-color: rgb(22, 95, 14);
+        }
     }
 }
 
@@ -76,16 +202,18 @@
     width: 4px;
     height: 6px;
 }
+
 .usernote-textarea::-webkit-scrollbar-track {
     background-color: rgba(241, 199, 91, 1);
 }
+
 .usernote-textarea::-webkit-scrollbar-thumb {
     background: #666;
-    border-radius: 10px;         
+    border-radius: 10px;
 }
 
 .usernote-textarea::-webkit-scrollbar-thumb:hover {
-background: #999;
+    background: #999;
 }
 
 .custom-profile {
@@ -188,7 +316,7 @@ background: #999;
     }
 }
 
-.custom-newsfeed{
+.custom-newsfeed {
     margin-top: 0;
     border-radius: 10px;
     max-height: 638px;
