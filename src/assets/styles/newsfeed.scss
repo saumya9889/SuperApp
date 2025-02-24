@@ -67,9 +67,10 @@ $text-color: #fff;
   overflow-y: auto; 
   // scrollbar-width: thin; 
   // scrollbar-color: #ccc transparent; 
-  margin-top: -3rem;
+  margin-top: -2rem;
   border: 2px solid #9c7389;
-  ;
+  border-radius: 15px;
+  width: 400px;
 }
 
 .news-feed::-webkit-scrollbar {

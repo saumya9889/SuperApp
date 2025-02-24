@@ -21,7 +21,6 @@ export const UserPage = () => {
 
         <div className="user-page-right">
           <div className="right-card-content">
-            <h2>Top Headlines</h2>
             <NewsFeed />
           </div>
         </div>
